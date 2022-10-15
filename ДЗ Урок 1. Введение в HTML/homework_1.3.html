@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Содержание</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 620px;
+        margin: 0 auto;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(73, 74, 75, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(73, 74, 75, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(73, 74, 75, 0.2);
+        padding: 50px 40px 150px 80px;
+      }
+      h1 {
+        font-size: 22px;
+        text-align: center;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 13px;
+        color: #232323;
+        text-align: center;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      ul {
+        padding: 0;
+      }
+      ul.nested-list {
+        padding: 0 40px;
+      }
+      li {
+        font-size: 13px;
+        color: #2A2090;
+        line-height: 24px;
+        list-style-type: none;
+      }
+      li::before, li.nested-list::before {
+        content: "•";
+        color: black;
+        padding-right: 18px;
+        font-size: 20px;
+        line-height: 24px;
+        vertical-align: middle;
+      }
+      li.list-style-none::before {
+        display: none;
+      }
+      li.nested-list-item::before {
+        content: "◦";        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Язык разметки HTML</h1>
+      <h2>Содержание</h2>
+      <ul>
+        <li>1 Общее представление</li>
+        <li>2 Браузеры</li>
+        <li>3 Версии</li>
+        <li>4 Перспективы</li>
+        <li>5 Структура HTML-документа</li>
+        <li class="list-style-none">
+          <ul class="nested-list">
+            <li class="nested-list-item">5.1 Варианты DOCTYPE для HTML 4.01</li>
+            <li class="nested-list-item">5.2 Варианты DOCTYPE для HTML 5</li>
+          </ul>
+        </li>
+        <li>6 Браузерные войны</li>
+        <li>7 Примечания</li>
+        <li>8 См. также</li>
+        <li>9 Ссылки</li>
+        <li>10 Литература</li>
+      </ul>
+    </div>
+  </body>
+</html>
