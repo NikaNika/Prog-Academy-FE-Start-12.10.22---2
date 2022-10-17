@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Содержание</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        width: 620px;
+        margin: 0 auto;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(73, 74, 75, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(73, 74, 75, 0.2);
+        box-shadow: 4px 4px 8px 0px rgba(73, 74, 75, 0.2);
+        padding: 50px 40px 150px 80px;
+      }
+      h1 {
+        font-size: 22px;
+        text-align: center;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 13px;
+        color: #232323;
+        text-align: center;
+        font-weight: 400;
+        line-height: 22px;
+      }
+      ul {
+        padding: 0;
+      }
+      ul.nested-list {
+        padding: 0 40px;
+      }
+      li {
+        font-size: 13px;        
+        line-height: 24px;
+        list-style-type: none;
+      }
+      li::before, li.nested-list::before {
+        content: "•";
+        color: black;
+        padding-right: 18px;
+        font-size: 20px;
+        line-height: 24px;
+        vertical-align: middle;
+      }
+      li.list-style-none::before {
+        display: none;
+      }
+      li.nested-list-item::before {
+        content: "◦";        
+      }
+      a {
+        text-decoration: none;
+        color: #2a2090;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Язык разметки HTML</h1>
+      <h2>Содержание</h2>
+      <ul>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.9E.D0.B1.D1.89.D0.B5.D0.B5_.D0.BF.D1.80.D0.B5.D0.B4.D1.81.D1.82.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"
+            >1 Общее представление</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.91.D1.80.D0.B0.D1.83.D0.B7.D0.B5.D1.80.D1.8B"
+            >2 Браузеры</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.92.D0.B5.D1.80.D1.81.D0.B8.D0.B8"
+            >3 Версии</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.9F.D0.B5.D1.80.D1.81.D0.BF.D0.B5.D0.BA.D1.82.D0.B8.D0.B2.D1.8B"
+            >4 Перспективы</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.A1.D1.82.D1.80.D1.83.D0.BA.D1.82.D1.83.D1.80.D0.B0_HTML-.D0.B4.D0.BE.D0.BA.D1.83.D0.BC.D0.B5.D0.BD.D1.82.D0.B0"
+            >5 Структура HTML-документа</a
+          >
+        </li>
+        <li class="list-style-none">
+          <ul class="nested-list">
+            <li class="nested-list-item">
+              <a
+                href="https://ru.wikipedia.org/wiki/HTML#.D0.92.D0.B0.D1.80.D0.B8.D0.B0.D0.BD.D1.82.D1.8B_DOCTYPE_.D0.B4.D0.BB.D1.8F_HTML_4.01"
+                >5.1 Варианты DOCTYPE для HTML 4.01</a
+              >
+            </li>
+            <li class="nested-list-item">
+              <a
+                href="https://ru.wikipedia.org/wiki/HTML#.D0.92.D0.B0.D1.80.D0.B8.D0.B0.D0.BD.D1.82.D1.8B_DOCTYPE_.D0.B4.D0.BB.D1.8F_HTML_5"
+                >5.2 Варианты DOCTYPE для HTML 5</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.91.D1.80.D0.B0.D1.83.D0.B7.D0.B5.D1.80.D0.BD.D1.8B.D0.B5_.D0.B2.D0.BE.D0.B9.D0.BD.D1.8B"
+            >6 Браузерные войны</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.87.D0.B0.D0.BD.D0.B8.D1.8F"
+            >7 Примечания</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.A1.D0.BC._.D1.82.D0.B0.D0.BA.D0.B6.D0.B5"
+            >8 См. также</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.A1.D1.81.D1.8B.D0.BB.D0.BA.D0.B8"
+            >9 Ссылки</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://ru.wikipedia.org/wiki/HTML#.D0.9B.D0.B8.D1.82.D0.B5.D1.80.D0.B0.D1.82.D1.83.D1.80.D0.B0"
+            >10 Литература</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
