@@ -5,9 +5,14 @@
     padding: 0;
 }
 
+a {
+  cursor: pointer;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #FFFBD9;
+  height: 100vh;
 }
 
 .container {
@@ -19,6 +24,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  position: relative;
 }
 
 .information {
@@ -43,7 +50,7 @@ p {
   margin: 30px 0;
 }
 
-a {
+a.btn {
   text-decoration: none;
   color: #FFFBD9;
   background: #2D2A24;
@@ -51,8 +58,54 @@ a {
   padding: 10px 30px;
   font-size: 28px;
   font-weight: 500;
-  width: 200px;
+  width: 250px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a.btn:hover {
+  background: #1E1E1E;
+}
+
+.btn-icon {
+  margin-left: 20px;
+}
+
+ul.dots {      
+  bottom: 20px;
+  list-style: none; 
+  position: absolute;
+  margin: auto;
+  bottom: 20px;    
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+a.dot, .previous a, .next a {
+  color: #FFFBD9;
+  font-size: 24px;
+  opacity: .6;
+}
+
+a.dot:hover,
+a.dot.active, .previous a:hover, .next a:hover {
+  opacity: .9;
+} 
+
+.controls {
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;  
+}
+
+.previous, .next {
+  padding: 20px;
 }
 
 @media only screen and (max-width: 899px){
@@ -62,14 +115,19 @@ a {
             p{
                 font-size: 16px;
             }
-            a{
+            a.btn{
                 padding: 5px 15px;
                 font-size: 20px;
             }
+
+            
         } 
 
         @media only screen and (max-width: 496px) {
 .information {
   width: 80%;
+}
+.controls {
+  display: none;
 }
         }
