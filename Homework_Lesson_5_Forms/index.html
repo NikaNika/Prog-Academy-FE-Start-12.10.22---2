@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Forms</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script
+			src="https://kit.fontawesome.com/79b911f0dd.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<!-- Form1 -->
+		<h2>Form 1</h2>
+		<form action="" class="form1" method="post" target="_self">
+			<div class="form__header">
+				<h3>Contact Manager</h3>
+				<select name="" id="">
+					<option value="">More Actions</option>
+				</select>
+			</div>
+			<div class="form__body">
+				<div class="form__left">
+					<div class="form__item">
+						<div class="form__itemText">First Name <span>*</span></div>
+						<input type="text" required />
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Second Name <span>*</span></div>
+						<input type="text" required />
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Address</div>
+						<!-- <input type="text"  /> -->
+						<textarea class="form__textarea"></textarea>
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">City</div>
+						<input type="text" />
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">State</div>
+						<select name="" id="">
+							<option value="">-Select-</option>
+						</select>
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">ZIP</div>
+						<input type="text" />
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Home Phone</div>
+						<input type="text" id="w-50" />
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Work Phone <span>*</span></div>
+						<input type="text" required />
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Fax Number</div>
+						<input type="text" id="w-50" />
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Website</div>
+						<div class="form__web">
+							<div class="form__webItem">
+								<div>URL</div>
+								<input type="text" />
+							</div>
+							<div class="form__webItem">
+								<div>Link Name</div>
+								<input type="text" />
+							</div>
+						</div>
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Email Address <span>*</span></div>
+						<input type="email" required />
+					</div>
+				</div>
+				<div class="form__right">
+					<div class="form__item radio">
+						<div class="form__question">
+							When is the best time to contact you?
+						</div>
+						<ul class="form__list">
+							<li><input type="radio" name="time" /> Morning</li>
+							<li><input type="radio" name="time" /> Afternoon</li>
+							<li><input type="radio" name="time" /> Evening</li>
+						</ul>
+					</div>
+					<div class="form__item radio">
+						<div class="form__question">
+							Whot is the best way to contact you?
+						</div>
+						<ul class="form__list">
+							<li><input type="radio" name="phone" /> Phone</li>
+							<li><input type="radio" name="email" /> Email</li>
+							<li><input type="radio" name="fax" /> Fax</li>
+						</ul>
+					</div>
+					<div class="form__item">
+						<div class="form__itemText">Message</div>
+						<textarea class="form__textarea"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="form__footer">
+				<input type="submit" value="Submit" />
+				<input type="reset" value="Reset" />
+			</div>
+		</form>
+		<!-- Form2 -->
+		<h2>Form 2</h2>
+		<form class="form2" action="" method="post" target="_self">
+			<div class="form__body">
+				<div class="form__item">
+					<label class="form__itemText">Твое имя</label>
+					<input type="text" required />
+				</div>
+				<div class="form__item">
+					<label class="form__itemText">Твой email</label>
+					<input type="email" required />
+				</div>
+				<div class="form__item">
+					<label class="form__itemText">Тема сообщения</label>
+					<select name="" id="">
+						<option value="">Выбрать тему</option>
+					</select>
+				</div>
+				<div class="form__item">
+					<label class="form__itemText">Текст <span>*</span></label>
+					<textarea class="form__textarea" required></textarea>
+				</div>
+				<div class="form__item">
+					<label class="form__itemText">Защита от спама <span>*</span></label>
+					<input class="capchaTxt" type="text" required />
+					<div class="capchaImg"><img src="capcha.jpg" alt="" /></div>
+					<a href="#">сменить картинку</a>
+				</div>
+			</div>
+			<div class="form__footer">
+				<input type="submit" value="отправить" />
+			</div>
+		</form>
+		<!-- Form3 -->
+		<h2>Form 3</h2>
+		<form class="form3" action="" method="post" target="_self">
+			<div class="form__header">
+				<h3>Sign up</h3>
+			</div>
+			<div class="form__body">
+				<div class="form__item">
+					<label for="name" class="form__itemText">Name</label>
+					<input id="name" type="text" placeholder="Michael Hartl" required />
+				</div>
+				<div class="form__item">
+					<label for="email" class="form__itemText">Email</label>
+					<input
+						id="email"
+						type="email"
+						placeholder="mhartl@example.com"
+						required
+					/>
+				</div>
+				<div class="form__item">
+					<label for="passwod" class="form__itemText">Password</label>
+					<input id="passwod" type="password" required />
+				</div>
+				<div class="form__item">
+					<label for="confirmation" class="form__itemText">Confirmation</label>
+					<input id="confirmation" type="password" required />
+				</div>
+			</div>
+			<div class="form__footer">
+				<input type="submit" value="Create my account" />
+			</div>
+		</form>
+		<!-- Form4 -->
+		<h2>Form 4</h2>
+		<form class="form4" action="" method="post" target="_self">
+			<div class="form__header">
+				<h3>Contact form</h3>
+			</div>
+			<div class="form__body">
+				<div class="form__item">
+					<label class="form__itemText">Full name <span>*</span></label>
+					<input type="text" required />
+				</div>
+				<div class="form__item">
+					<label class="form__itemText">Email <span>*</span></label>
+					<input type="email" required />
+				</div>
+				<div class="form__item">
+					<label class="form__itemText">Subject <span>*</span></label>
+					<input type="text" required />
+				</div>
+				<div class="form__item">
+					<label class="form__itemText">Message <span>*</span></label>
+					<textarea class="form__textarea" required></textarea>
+				</div>
+			</div>
+			<div class="form__footer">
+				<input type="submit" value="Submit Form" />
+			</div>
+		</form>
+		<!-- Form5 -->
+		<h2>Form 5</h2>
+		<form action="" method="post" target="_self" class="form5">
+			<div class="form__header">
+				<h3>Login form</h3>
+			</div>
+			<div class="form__body">
+				<label for="email">E-mail</label>
+				<div class="email">
+					<input type="text" id="email" name="email" value="" />
+					<span class="icon"><i class="fa-solid fa-user"></i></span>
+				</div>
+				<label for="passwod">Password</label>
+				<div class="password">
+					<input type="password" id="password" name="password" value="" />
+					<span class="icon"><i class="fa-solid fa-lock"></i></span>
+				</div>
+				<div></div>
+				<a href="#">Forgot password?</a>
+				<div></div>
+				<div>
+					<input
+						class="checkbox"
+						id="checkbox"
+						type="checkbox"
+						value=""
+						checked
+					/>
+					<label for="checkbox" class="checkmark">Keep me logged in</label>
+				</div>
+			</div>
+			<div class="form__footer">
+				<input type="submit" value="Register" />
+				<input type="submit" value="Log in" />
+			</div>
+		</form>
+		<br />
+	</body>
+</html>
