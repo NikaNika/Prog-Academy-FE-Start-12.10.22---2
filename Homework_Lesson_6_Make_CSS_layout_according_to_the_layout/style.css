@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+@font-face {
+  font-family: "NothingYouCouldDo";
+  src: url(fonts/NothingYouCouldDo.ttf);
+}
+
+@font-face {
+  font-family: "NothingYouCouldDoBold";
+  src: url(fonts/NothingYouCouldDoBold.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #FFFCDB;
+  font-size: 13px;
+}
+
+header {  
+  background-image: url(img/bg.jpg);
+  background-position: center, center;  
+  padding: 80px 0;  
+}
+
+.title {
+  font-family: "NothingYouCouldDo";
+  text-align: center;
+  font-size: 62px;
+  text-transform: uppercase;
+  color: #1E1915;
+  background: rgba(255, 252, 219, .3);
+  margin-bottom: 50px;
+}
+
+.title::first-letter {
+  font-size: 76px;
+}
+
+.text-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  width: 1020px;
+  margin: auto;
+}
+
+.item {  
+  padding: 50px 30px 30px 30px;
+  background: rgba(118, 90, 54, .5);
+  border-radius: 10px;
+  margin: 10px;
+  color: #FFFCDB;
+  box-shadow: 3px 3px 5px #1E1915;
+}
+
+.item h2 {
+  text-align: right;
+  font-family: "NothingYouCouldDo";
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.item p {
+  text-align: justify;
+}
+
+.content {
+  display: flex;
+  width: 1020px;
+  justify-content: space-around;
+  margin: auto;
+  color: #5D5441;  
+  flex-grow: 1;
+  /* position: relative; */
+}
+
+/* .line {
+  position: absolute;
+  left: 0;
+} */
+
+.article {
+  padding: 20px;
+  flex-grow: 2;
+  width: 60%;  
+}
+
+.article h2 {
+  font-family: "NothingYouCouldDo";
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.article p {
+  text-align: justify;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  flex-grow: 1;
+}
+
+.social h4 {
+  margin-bottom: 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  color: #5D5441;
+  text-decoration: none;
+  padding: 7px 0;
+}
+
+.social a {
+  color: #5D5441;
+  text-decoration: none;
+}
+
+.social a:hover {
+  text-decoration: underline;
+}
+
+.social i {
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1024px) {
+header {
+  padding: 50px 0; 
+  height: fit-content;
+}
+
+.text-items, .content {
+  width: 800px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.item h2 {
+  font-size: 16px;
+}
+
+  .item p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 797px) {
+  .text-items {
+    flex-direction: column;    
+  }
+
+  .text-items, .content {
+    width: 600px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .article {
+    width: 90%;
+    padding: 20px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 20px 0;
+  }
+
+  .text-items, .content {
+    width: 400px;
+  }
+
+  .title {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 414px) {
+  .text-items, .content {
+    width: 360px;
+  }
+
+  .item {
+    padding: 30px;
+  }
+}
