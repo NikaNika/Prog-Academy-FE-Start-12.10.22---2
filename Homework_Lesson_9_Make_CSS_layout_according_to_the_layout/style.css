@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;	
+}
+
+a {
+	text-decoration: none;	
+}
+
+.wraper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100vh;
+	background-image: url(img/bg.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header {
+	background-color: black;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+}
+
+.nav__logo {
+	text-transform: uppercase;
+	color: white;
+	font-size: 36px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.nav__logo span {
+	font-weight: 300;
+	color: #ff993e;
+}
+
+.nav__icon {
+	display: none;
+	font-size: 24px;
+}
+
+.nav__item {
+	list-style: none;
+	display: inline-block;
+	padding: 10px 15px;
+}
+
+.nav__item a, .nav__icon {
+	color: #a3a3a3;
+}
+
+.nav__item a:hover, .nav__icon:hover {
+	color: white;
+}
+
+.main {
+	   
+}
+
+.main__wraper {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr;
+grid-column-gap: 80px;
+grid-row-gap: 0px;
+align-items: center;
+padding: 50px 0;
+}
+
+.main__title {
+	text-transform: uppercase;
+	color: white;
+	font-size: 96px;
+	font-weight: 600;
+}
+
+.main__title span {
+	font-weight: 300;
+	color: #ff993e;
+}
+
+.main__subtitle {
+	color: white;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.line {
+    width: 80px;
+    border-bottom: 2px solid white;
+		margin: 30px 0;
+}
+
+.main__content {
+    color: white;
+		margin-bottom: 50px;
+}
+
+.main__btn {
+    color: white;
+    border: 2px solid white;
+    padding: 10px 35px;
+    font-weight: 600;
+    margin: 20px 0;
+		display: inline-block;
+		cursor: pointer;
+}
+
+.main__btn:hover {
+	background-color: white;
+	color: #666666;
+}
+
+.main__form {
+	width: 350px;
+	text-align: right;
+	justify-self: end;	
+}
+
+.form__header {
+	background-color: #F5F5F5;
+	padding: 20px 30px;	
+}
+
+.form__header h2 {
+	font-size: 22px;
+	text-align: center;
+}
+
+.form__header h2 span {
+	text-transform: uppercase;
+	color: #FF8B38;
+}
+
+.form__body {
+	background-color: white;
+	padding: 20px 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+.form__control {
+	border: none;
+	border-bottom: 1px solid #C4C4C4;
+	padding: 10px;
+	color: #C4C4C4;
+	margin: 10px 0;
+}
+
+.form__footer {
+	background-color: #FF8B38;
+	padding: 20px 30px;
+	text-align: center;
+	border: navajowhite;
+	width: 100%;
+	color: white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.form__footer:hover {
+	background-color: #FF9B51;
+}
+
+.footer {
+	background-color: white;
+} 
+
+.footer__info {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 0;
+}
+
+.footer__text p {
+	color: #86878b;
+	padding-right: 25px;
+}
+
+.footer__social {
+	display: flex;
+	font-size: 36 px;
+}
+
+.footer__social i {
+	color: #cccccc;
+	font-size: 36px;
+	margin: 0 25px;
+}
+
+.footer__social i:hover {
+	color: #666666;
+}
+
+@media screen and (max-width: 1240px) {
+	.container {
+		width: 1200px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 970px;
+	}
+
+	.main__title {
+		font-size: 54px;
+	}
+
+	.main__subtitle {
+		font-size: 18px;
+	}
+
+	.main__wraper {
+		padding: 10px 0;
+	}
+
+	.line {
+		margin: 20px;
+	}
+
+	.main__content {
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.container {
+		width: 780px;
+	}
+
+	.footer__info {
+		flex-direction: column;
+	}
+
+	.footer__text {
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.container {
+		width: 580px;
+	}
+
+	.nav__icon {
+		display: block;
+	}
+
+	.nav__list {
+		display: none;
+	}
+
+	.main__wraper {
+		display: block;
+	}
+
+	.main__form {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: 400px;
+	}
+
+	.footer__social i {
+		margin: 10px;
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.container {
+		width: 350px;
+	}
+}
