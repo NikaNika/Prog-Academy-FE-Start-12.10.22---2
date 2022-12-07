@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 5</title>
+  <style>
+    body {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    pre {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    pre p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 14px;
+    }  
+  </style>
+</head>
+<body>
+  <h2>Task 5</h2>
+  <p>Вивести на екран ряд чисел Фібоначчі, що складається з n елементів (n прийняти від користувача).<br/>
+    Числа Фібоначчі - це елементи числової послідовності, в якій кожне наступне число дорівнює сумі двох попередніх.
+  </p>
+  <pre>
+    <script>
+      const n = +prompt('Число n');
+      let prev = 1;
+      let last = 1;
+      let str = '1 1 ';
+      
+      for (let i = 1; i < n; i++) {
+        let temp = prev + last;
+        str += `${temp} `;
+        prev = last;
+        last = temp;
+      }
+
+      document.writeln(`Отриманий ряд чисел Фібоначі: <b>${str}</b>`)
+    </script>
+  </pre>
+</body>
+</html>

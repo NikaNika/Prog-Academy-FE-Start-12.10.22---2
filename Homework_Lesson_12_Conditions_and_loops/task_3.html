@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3</title>
+  <style>
+    body {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    pre {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    pre p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 14px;
+    } 
+  </style>
+</head>
+<body>
+  <h2>Task3</h2>
+  <p>Визначити якесь із трьох, введених користувачем, чисел максимальне і вивести його на екран.</p>
+  <pre>
+    <script>    
+      const a = +prompt('Перше число');
+      const b = +prompt('Друге число');
+      const c = +prompt('Третє число');
+      let max = a;
+
+      document.writeln(`<p>Перше число: <b>${a}</b></p>`);
+      document.writeln(`<p>Друге число: <b>${b}</b></p>`);
+      document.writeln(`<p>Третє число: <b>${c}</b></p>`);
+
+      if (max < b) {
+        max = b;
+      } 
+      if (max < c) {
+        max = c;
+      }
+
+      document.writeln(`<p>Максимальне число <b>${max}</b></p>`);
+
+    </script>
+  </pre>
+</body>
+</html>

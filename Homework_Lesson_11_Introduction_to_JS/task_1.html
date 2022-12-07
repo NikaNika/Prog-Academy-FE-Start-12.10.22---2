@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework Task 1</title>
+    <style>
+      pre {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+	</head>
+	<body>
+		<pre>
+    <script type="text/javascript">
+      document.writeln(`<h2>Task 1</h2>`);
+      document.writeln(`<p>За координатами двох точок, які вводить користувач, визначити рівняння прямої, що проходить через ці точки.<br/>Загальний вигляд рівняння: y = kx + b; де k = (y1 - y2) / (x1 - x2), b = y2 - k * x2.</p>`);
+
+      let x1 = +parseInt(prompt('Введіть координату X першої точки'));                
+      let y1 = +parseInt(prompt('Введіть координату Y першої точки'));
+      let x2 = +parseInt(prompt('Введіть координату X другої точки'));
+      let y2 = +parseInt(prompt('Введіть координату Y другої точки'));
+      let k = (y1 - y2) / (x1 - x2);
+      let b = y2 - k*x2;
+
+      document.writeln(`Отримане рівняння: y = ${k}x + ${b}`);
+    </script>
+  </pre>
+	</body>
+</html>

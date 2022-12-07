@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 6</title>
+  <style>
+    body {
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    pre {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    pre p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 14px;
+    }  
+    pre .block {
+      float: left;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Task 6</h2>
+  <p>Вивести на екран таблицю множення від 0 до 9.</p>
+  <div class='block'>
+  <pre>
+    <script>      
+      for (let i = 0; i <= 9; i++) {
+        document.write(`<div class='block'>`);
+        for (let j = 0; j <= 9; j++) {
+          document.writeln(`<p>${i} * ${j} = ${i * j}</p>`)
+        }
+        document.write(`</div>`)
+      }
+    </script>
+  </pre>
+  </div>
+</body>
+</html>

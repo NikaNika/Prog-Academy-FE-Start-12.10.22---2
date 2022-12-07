@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework Task 2</title>
+  <style>
+    pre {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <pre>
+    <script type="text/javascript">
+      document.writeln(`<h2>Task 2</h2>`);
+      document.writeln(`<p>Обміняти значення двох змінних, використовуючи третю (буферну) змінну.</p>`);
+
+      let firstVariable = 'first';
+      let secondVariable = 'second';
+      let temp;
+
+      document.writeln(`first = ${firstVariable}, second = ${secondVariable}`);
+
+      temp = firstVariable;
+      firstVariable = secondVariable;
+      secondVariable = temp;  
+
+      document.writeln(`first = ${firstVariable}, second = ${secondVariable}`);
+    </script>
+  </pre>  
+</body>
+</html>
