@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 4</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 4</h2>
+		<p>
+			Відсортувати масив на 10 чисел у порядку зростання.<br/>
+      Значення приймаються від користувача. Сортування здійснюється методом sort().
+		</p>
+		<pre>
+    <script>         
+        const a_1 = +prompt('Перше число');
+        const a_2 = +prompt('Друге число');
+        const a_3 = +prompt('Третє число');
+        const a_4 = +prompt('Четверте число');
+        const a_5 = +prompt('П`яте число');
+        const a_6 = +prompt('Шосте число');
+        const a_7 = +prompt('Сьоме число');
+        const a_8 = +prompt('Восьме число');
+        const a_9 = +prompt('Дев`яте число');
+        const a_10 = +prompt('Девсяте число'); 
+        let array = [a_1, a_2, a_3, a_4, a_5, a_6, a_7, a_8, a_9, a_10];            
+        let result = array.sort((a, b) => a - b);
+
+        console.log(result);
+        document.writeln(`<p>Ви ввели ${array}</p>`)
+        document.writeln(`<p>Результат ${result}</p>`);
+    </script>
+  </pre>
+	</body>
+</html>

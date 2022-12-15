@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 1</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 1</h2>
+		<p>Зробити власні приклади методів для масивів.</p>
+		<div>
+			<h1>Шпаргалка по методам масиву:</h1>
+			<h2>Для додавання/видалення елементів:</h2>
+			<ul>
+				<li>push(... items) – додає елементи до кінця,</li>
+				<li>arr.pop() – дістає елемент з кінця,</li>
+				<li>arr.shift() – дістає елемент з початку,</li>
+				<li>arr.unshift(...items) – додає елементи в початок.</li>
+				<li>
+					splice(pos, deleteCount, ...items) – починаючи з індексу pos, видаляє
+					deleteCount елементів та вставляє items.
+				</li>
+				<li>
+					slice(start, end) – створює новий масив, копіюючи в нього елементи з
+					позиції start до end (не включаючи end).
+				</li>
+				<li>
+					concat(...items) – повертає новий масив: копіює всі члени поточного
+					масиву і додає до нього items. Якщо якийсь із items є масивом, тоді
+					беруться його елементи.
+				</li>
+			</ul>
+			<h2>Для пошуку серед елементів:</h2>
+			<ul>
+				<li>
+					indexOf/lastIndexOf(item, pos) – шукає item, починаючи з позиції pos,
+					і повертає його індекс або -1, якщо нічого не знайдено.
+				</li>
+				<li>
+					includes(value) – повертає true, якщо в масиві є елемент value, в
+					іншому випадку false.
+				</li>
+				<li>
+					find/filter(func) – фільтрує елементи через функцію і віддається
+					перше/всі значення, при проходженні яких функція повертає true.
+				</li>
+				<li>findIndex схожий на find, але повертає індекс замість значення.</li>
+			</ul>
+			<h2>Для перебору елементів:</h2>
+			<ul>
+				<li>
+					forEach(func) – викликає func для кожного елемента. Нічого не
+					повертає.
+				</li>
+			</ul>
+			<h2>Для перетворення масиву:</h2>
+			<ul>
+				<li>
+					map(func) – створює новий масив з результатів виклику func для кожного
+					елемента.
+				</li>
+				<li>sort(func) – сортує масив «на місці», а потім повертає його.</li>
+				<li>
+					reverse() – «на місці» змінює порядок елементів на протилежний і
+					повертає змінений масив.
+				</li>
+				<li>split/join – перетворює рядок в масив і назад.</li>
+				<li>
+					reduce(func, initial) – обчислює одне значення на основі всього
+					масиву, викликаючи func для кожного елемента і передаючи проміжний
+					результат між викликами.
+				</li>
+			</ul>
+			<h2>Додатково:</h2>
+			<ul>
+				<li>Array.isArray(arr) перевіряє, чи є arr масивом.</li>
+				<li>arr.some(fn)/arr.every(fn) перевіряють масив.</li>
+			</ul>								
+		</div>
+		<h4>Результати дивись в консолі</h4>
+		<pre>
+    <script> 
+			// push 
+			let sports = ['футбол', 'бейсбол'];
+			let total = sports.push('американський футбол', 'плавання');
+			console.log(sports); // ['футбол', 'бейсбол', 'американський футбол', 'плавання']
+			console.log(total);  // 4 
+			
+			// pop
+			console.log(sports.pop()); //'плаванн'
+			console.log(sports); // ['футбол', 'бейсбол', 'американський футбол']
+
+			// shift
+			console.log(sports.shift()); //'футбол'
+			console.log(sports); // ['бейсбол', 'американський футбол']
+
+			// unshift
+			console.log(sports.unshift('футбол')); // 3
+			console.log(sports); // ['футбол', 'бейсбол', 'американський футбол']
+
+			// splice
+			sports.splice(2, 0, 'плавання');
+			console.log(sports); // ['футбол', 'бейсбол', 'плавання', 'американський футбол']
+
+			// slice
+			sports.splice(-1);
+			console.log(sports); // ['футбол', 'бейсбол', 'плавання']
+
+			// concat
+			const subsports = ['американський футбол', 'гребля'];
+			let result = sports.concat(subsports);
+			console.log(result); // ['футбол', 'бейсбол', 'плавання', 'американський футбол', 'гребля']
+
+			// indexOf
+			console.log(result.indexOf('плавання')); // 2
+			console.log(result.indexOf('дзюдо')); // -1
+
+			// includes
+			console.log(result.includes('дзюдо')); // false
+			console.log(result.includes('гребля')) // true
+
+			// filter
+			console.log(result.filter(el => el.length > 6)); // ['бейсбол', 'плавання', 'американський футбол']
+
+			// findIndex
+			console.log(result.findIndex(el => el === 'плавання')); // 2
+
+			// forEach
+			result.forEach((el) => console.log(el));
+			// футбол
+			// бейсбол
+			// плавання
+			// американський футбол
+			// гребля
+
+			// map
+			console.log(result.map((el) => el.length * 2)); // [12, 14, 16, 40, 12]
+
+			// sort
+			console.log(result.sort()); // ['американський футбол', 'бейсбол', 'гребля', 'плавання', 'футбол']
+
+			// reverse
+			console.log(result.reverse()); // ['футбол', 'плавання', 'гребля', 'бейсбол', 'американський футбол']
+
+			// split/join
+			let str = 'Я вивчаю JS';
+			let array = str.split(' ');
+			console.log(array); // ['Я', 'вивчаю', 'JS']
+			console.log(array.join('-')); // 'Я-вивчаю-JS'
+
+			// reduce
+			const array1 = [1, 2, 3, 4];			
+			const initialValue = 0;
+			const sumWithInitial = array1.reduce(
+				(accumulator, currentValue) => accumulator + currentValue,
+				initialValue
+			);
+			console.log(sumWithInitial); // 10
+
+			// isArray
+			// Усі наступні повернуть true
+			Array.isArray([]);
+			Array.isArray([1]);
+			Array.isArray(new Array());
+			// Маловідомий факт: Array.prototype сам является массивом:
+			Array.isArray(Array.prototype);
+
+			// Усі наступні повернуть false
+			Array.isArray();
+			Array.isArray({});
+			Array.isArray(null);
+			Array.isArray(undefined);
+			Array.isArray(17);
+			Array.isArray("Array");
+			Array.isArray(true);
+			Array.isArray(false);
+			Array.isArray({ __proto__: Array.prototype });
+
+			// some
+			console.log(result.some((el) => el.length%2 === 0)); // true
+			      
+    </script>
+  </pre>
+	</body>
+</html>

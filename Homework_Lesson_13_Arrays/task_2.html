@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 2</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 2</h2>
+		<p>
+			Створити функцію для знаходження мінімального та максимального елемента масиву getMinAndMax(array).<br/>
+      Результат повинен виводитись у консоль.
+		</p>
+		<pre>
+    <script> 
+      function getMinAndMax(array) {
+        return `min = ${Math.min.apply(Math, array)}, max = ${Math.max.apply(Math, array)}`
+      }   
+      
+      console.log(getMinAndMax([12, 56, 76, 23 ,1, 9]));
+      console.log(getMinAndMax([1, 2, 3]));
+      console.log(getMinAndMax([12, 56, -76, 23 ,1, 9]));
+    </script>
+  </pre>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 5</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 5</h2>
+		<p>
+			Створити програму, що виконує вставку елемента в масив після елемента, значення якого вкаже користувач.<br/>
+      Вихідний масив [12, 56, 76, 23 ,1, 9]
+		</p>
+		<pre>
+    <script> 
+      let array = [12, 56, 76, 23 ,1, 9];   
+      const a = +prompt('Введіть значення елемента');
+      const b = +prompt('Введіть значення елемента, після якого вставити елемент');
+
+      if (array.indexOf(b) === -1) {
+        console.log(`Елемента ${b} немає в масиві`);
+        document.writeln(`<p>Елемента ${b} немає в масиві</p>`)
+      } else {
+        array.forEach((element, i) => {
+        if (element === b) {
+          array.splice(i+1, 0, a);
+        }
+      });
+
+      console.log(array);
+      document.writeln(`<p>Результат ${array}</p>`);
+      }      
+    </script>
+  </pre>
+	</body>
+</html>
