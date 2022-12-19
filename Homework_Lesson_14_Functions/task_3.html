@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 3</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 3</h2>
+		<p>
+			Створити гру "Камінь-Ножиці-Папір".<br/>
+         Вибір комп'ютера визначається рядком:<br/><br/>
+         var computerChoice = Math.random();<br/>
+         alert(computerChoice);<br/><br/>
+         Math.random() видає довільне число у проміжку від 0 до 1, виходячи з цього можна побудувати принцип вибору рішення комп'ютера.
+		</p>
+		<pre>
+    <script>  
+			const question = prompt("Камінь, ножиці чи папір?", "Камінь Ножиці Папір");  
+      let computerChoice = Math.random();
+			
+			if (computerChoice < 0.34) {
+      	computerChoice = "Камінь";
+    	} else if (computerChoice <= 0.67) {
+				computerChoice = "Ножиці";
+			} else {
+				computerChoice = "Папір";
+    	}
+
+      alert(`Компьютер обрав ${computerChoice}`);
+      
+      const complete = function(choice1, choice2) {
+      	if (choice1 === choice2) {
+          return "Нічия!";
+      	} else if (choice1 === "Камінь") {
+        	if (choice2 === "Ножиці") {
+          	return "Камень победил!";
+        	} else {
+          	return "Папір виграла!";
+	        }
+      } else if (choice1 === "Папір") {
+        if (choice2 === "Камінь") {
+          return "Папір виграла!";
+        } else {
+          return "Ножиці виграли!";
+        }
+      } else if (choice1 === "Ножиці") {
+        if (choice2 === "Папір") {
+          return "Ножиці виграли!";
+        } else {
+          return "Камінь виграв!";
+        }
+      } else {
+				return "Ви невірно ввели слово. Компьютер виграв."
+			}
+    }
+
+		alert(complete(question, computerChoice));
+
+		document.writeln(`<p>Компьютер обрав ${computerChoice}</p>`);
+		document.writeln(`<p>Ви обрали ${question}</p>`);
+		document.writeln(`<p>${complete(question, computerChoice)}</p>`);
+      
+    </script>
+  </pre>
+	</body>
+</html>

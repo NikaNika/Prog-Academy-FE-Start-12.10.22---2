@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 2</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 2</h2>
+		<p>
+			Створити функцію, що зводить число до ступеня, число і сам ступінь вводиться користувачем
+		</p>
+		<pre>
+    <script>    
+      const a = +prompt('Введіть число');
+      const b = +prompt('Введіть ступінь');     
+
+      function exponentiation(num, pow) {        
+        return Math.pow(num, pow);
+      }
+
+      if (typeof a === 'number' && !isNaN(a) && typeof b === 'number' && !isNaN(b)) {
+        document.writeln(`<p>${a}<sup>${b}</sup> = ${exponentiation(a, b)}</p>`)
+      } else {
+        document.writeln(`<p>Щось пішло не так. Cпробуйте ще раз.</p>`)
+      }
+    </script>
+  </pre>
+	</body>
+</html>

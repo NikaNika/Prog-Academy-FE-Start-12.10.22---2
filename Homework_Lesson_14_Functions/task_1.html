@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 1</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 1</h2>
+		<p>
+			Створити функцію calculate(operand1, operand2, sign), де operand1 і operand2 – два числа, sign – знак арифметичної операції.<br/>
+        Функція повинна розраховувати результат операції, з переданого їй знака.<br/>
+        Функція повинна перевіряти коректність введених чисел та знаку операції.<br/>
+        Усі аргументи для функції прийняти від користувача.<br/>
+		</p>
+		<pre>
+    <script>    
+      const a = +prompt('Перше число');      
+      const b = +prompt('Друге число');
+      const c = prompt('Знак операції (+, -, *, /)');     
+      
+      function calculate(operand1, operand2, sign) {
+        let result;
+        if (typeof operand1 === 'number' && !isNaN(operand1) && typeof operand2 === 'number' && !isNaN(operand2)) {
+          switch (sign) {
+          case '+':
+            result = operand1 + operand2;
+            break;
+            case '-':
+            result = operand1 - operand2;
+            break;
+            case '*':
+            result = operand1 * operand2;
+            break;
+            case '/':
+            result = operand1 / operand2;
+            break;
+            default:
+            result = 'Ви ввели невірний знак операції';
+            break;
+        }
+      } else { 
+            result = 'Щось пішло не так. Cпробуйте ще раз.';
+        }
+
+        return result;
+      }      
+
+      document.writeln(`Результат: ${calculate(a, b, c)}`); 
+    </script>
+  </pre>
+	</body>
+</html>
