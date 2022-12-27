@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 2</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 2</h2>
+		<p>
+			Створити об'єкт Calculator, який повинен містити методи для розрахунку суми, різниці, добутку та приватного двох чисел.
+        Протестувати цей об'єкт, приймаючи від користувача значення двох операндів та знак операції.
+        Залежно від прийнятого знака операції викликати відповідний метод.
+		</p>
+		<pre>
+    <script> 
+    const Calculator = {
+      a: +prompt('Перше число'),
+      b: +prompt('Друге число'),
+      sign: prompt('Знак операції (+, -, *, /)'),
+      result: '',
+      sum: function sum() {return this.a + this.b},
+      dif: function dif() {return this.a - this.b},
+      prod: function prod() {return this.a * this.b},
+      part: function part() {return this.a / this.b}
+    }  
+    
+    function getResult(a, b, sign) {
+      let result = ''; 
+      if (typeof a === 'number' && !isNaN(a) && typeof b === 'number' && !isNaN(b))  {
+        switch (sign) {
+          case '+':
+            result = Calculator.sum();
+            break;
+            case '-':
+            result = Calculator.dif();
+            break;
+            case '*':
+            result = Calculator.prod();
+            break;
+            case '/':
+            result = Calculator.part();
+            break;
+            default:
+            result = 'Ви невірно ввели знак';
+            break;
+        } 
+      } else {
+        result = 'Щось пішло не так. Cпробуйте ще раз.';
+      }   
+      return result;      
+    }  
+
+    Calculator.result = getResult(Calculator.a, Calculator.b, Calculator.sign);
+    document.writeln(`<p>Результат: ${Calculator.result}</p>`); 
+      
+    </script>
+  </pre>
+	</body>
+</html>

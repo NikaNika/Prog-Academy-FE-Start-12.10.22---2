@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Task 3</title>
+		<style>
+			body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Task 3</h2>
+		<p>
+			Створити масив, який зберігатиме у собі інформацію про співробітників підприємства. Кожен елемент масиву - об'єкт,
+        містить властивості: name, sName, age, occupation, та метод show, який виводить всю інформацію про користувача.
+        Реалізувати заповнення масиву користувачем. Після закінчення заповнення – вивести інформацію про співробітників.
+		</p>
+		<pre>
+    <script> 
+    const arr = [];    
+
+    while (confirm('Введення інформації про коритувача')) {
+      const user = {
+      name: prompt('Введіть ім`я користувача'), 
+      sName: prompt('Введіть призвіще користувача'), 
+      age: prompt('Введіть вік користувача'), 
+      occupation: prompt('Введіть посаду користувача'), 
+      show: function show() {
+        document.writeln(`<p>${this.name} ${this.sName}, ${this.age}, ${this.occupation}</p>`);
+      }
+    }
+      arr.push(user);
+    }
+
+    for (let el of arr) {
+      el.show();
+    }    
+
+    </script>
+    </pre>
+    </body>
+    </html>

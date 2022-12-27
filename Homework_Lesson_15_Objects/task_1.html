@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Homework Task 1</title>
+    <style>      
+      body {
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			pre p {
+				margin: 0;
+				font-size: 14px;
+				line-height: 14px;
+			}
+    </style>
+	</head>
+	<body>
+    <h2>Task 1</h2>
+    <p>Створіть об'єкт Point, що містить дві властивості: "x" та "y" - координати точки, і метод GetQuadrant, 
+що обчислює, в якому квадранті декартової системі координат знаходиться дана точка. 
+Протестуйте цей об'єкт, змінюючи значення його координат, та повторно викликаючи метод GetQuadrant.</p>
+		<pre>
+    <script type="text/javascript">
+      const Point = {};
+
+      Point.x = +parseInt(prompt('Введіть координату X'));                
+      Point.y = +parseInt(prompt('Введіть координату Y'));  
+      Point.result = 'Ви ввели невірні значення';          
+      Point.GetQuadrant = function GetQuadrant() { 
+        console.log(this)       
+        if (this.x === 0 && this.y === 0) {
+          this.result = 'точка у центрі'
+        }
+        if (this.x > 0 && this.y > 0) {
+          this.result = '1 квадрант'
+        }
+        if (this.x > 0 && this.y < 0) {
+          this.result = '2 квадрант'
+        }
+        if (this.x < 0 && this.y < 0) {
+          this.result = '3 квадрант'
+        }
+        if (this.x < 0 && this.y > 0) {
+          this.result = '4 квадрант'
+        }
+        return this.result;
+      };      
+      
+      document.writeln(`<p>Ви ввели точку з координатами (${Point.x}, ${Point.y})</p>`)
+      document.writeln(`<p>Місце знаходження точки:<b> ${Point.GetQuadrant()}</b></p>`);
+    </script>
+  </pre>
+	</body>
+</html>
