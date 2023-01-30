@@ -4,6 +4,20 @@ const loginBtn = tabs[1];
 const signupContent = document.querySelector('#signup');
 const loginContent = document.querySelector('#login');
 
+const inputs = document.querySelectorAll('input');
+
+function inputCleaner(e) {
+  const input = e.target;
+  const label = e.target.previousElementSibling;
+
+  label.classList.add('active');
+	label.classList.add('highlight');   
+}  
+
+inputs.forEach(input => {
+  input.addEventListener('focus', inputCleaner);  
+})
+
 function loginTabHandler(e) {
   e.preventDefault();
   this.classList.add('active');
