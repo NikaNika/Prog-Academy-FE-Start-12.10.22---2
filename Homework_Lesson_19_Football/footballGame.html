@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>	
+		<h1>Рахунок: <span class="firstPoints">0</span> : <span class="secondPoints">0</span></h1>
+		<div class="wraper">
+			<div class="firstGoal"></div>
+			<div class="field">
+			<img					
+					src="ball.png"
+					id="ball"
+					alt=""
+					draggable="true"
+				/>	
+			</div>
+			<div class="secondGoal"></div>
+		</div>		
+		
+		<script>	
+			const firstGoal = document.querySelector('.firstGoal');
+			const secondGoal = document.querySelector('.secondGoal');
+			const field = document.querySelector('.field');	
+			const firstPoints = document.querySelector('.firstPoints');
+			const secondPoints = document.querySelector('.secondPoints');
+			let points1 = 0;
+			let points2 = 0;
+			const ball = document.getElementById('ball');
+
+			ball.setAttribute('draggable', 'true');
+
+			secondGoal.addEventListener('dragover', prevent);
+			firstGoal.addEventListener('dragover', prevent);
+			field.addEventListener('dragover', prevent);				
+
+			function prevent(e) {
+				e.preventDefault();				
+			}
+
+			secondGoal.addEventListener('drop', dropElement);
+			firstGoal.addEventListener('drop', dropElement);
+			field.addEventListener('drop', dropElement);
+
+			function dropElement(e) {								
+				this.appendChild(ball);
+				const goal = e.target.className
+				switch (goal) {
+					case "field" :
+						ball.style.top = e.clientY - field.getBoundingClientRect().y - ball.offsetHeight / 2 + 'px';
+						ball.style.left = e.clientX - field.getBoundingClientRect().x - ball.offsetWidth / 2 + 'px';
+						break;
+					case "firstGoal" :
+						ball.style.top = e.clientY - firstGoal.getBoundingClientRect().y - ball.offsetHeight / 2 + 'px';
+						ball.style.left = e.clientX - firstGoal.getBoundingClientRect().x - ball.offsetWidth / 2 + 'px';						
+						firstPoints.innerHTML = ++points1;
+						break;
+					case "secondGoal" :
+						ball.style.top = e.clientY - secondGoal.getBoundingClientRect().y - ball.offsetHeight / 2 + 'px';
+						ball.style.left = e.clientX - secondGoal.getBoundingClientRect().x - ball.offsetWidth / 2 + 'px';
+						secondPoints.innerHTML = ++points2;
+						break;
+				}
+								
+			}			
+		</script>
+	</body>
+</html>

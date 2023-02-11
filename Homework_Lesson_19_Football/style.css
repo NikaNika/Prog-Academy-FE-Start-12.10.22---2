@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;  
+  height: 100vh;
+}
+
+.wraper {
+  width: 512px;
+  height: 681px;
+  background-image: url(field.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;  
+}
+
+.field {  
+  height: 596px;
+  width: 80%;  
+  position: relative;    
+}
+
+.firstGoal,
+.secondGoal {  
+  width: 84px;
+  height: 80px;   
+  position: relative;  
+}
+
+#ball {
+	height: 50px;  
+  position: absolute; 
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+}
