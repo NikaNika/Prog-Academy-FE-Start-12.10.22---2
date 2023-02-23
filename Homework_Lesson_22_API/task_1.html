@@ -5,38 +5,97 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
 		<style>
-			.container {
-        width: 80%;
-        margin: 0 auto;
+			@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+			* {
+				margin: 0;
+				padding: 0;
 			}
+
+			body {
+				background-color: #cccccc;
+				font-family: 'Old Standard TT', serif;
+			}
+
+			.container {				
+				width: 90%;
+				margin: 0 auto;
+			}
+
 			h1 {
 				text-align: center;
+				text-transform: uppercase;
+				font-size: 60px;
+				margin: 30px;
 			}
+
 			.grid {
 				display: grid;
-				grid-template-columns: 1fr 1fr;
+				grid-template-columns: 1fr 1fr 1fr;
 				width: 90%;
 				margin: auto;
 				grid-gap: 40px;
 			}
+
 			.grid__item {
 				text-align: center;
+				background-color: wheat;
+				padding: 30px; 
+				border-radius: 5px; 
 			}
 
-      .grid__body {
-        text-align: justify;
-      }
+			.grid__title {
+				font-style: italic;
+				margin: 20px 0;
+			}
+
+			.grid__body {
+				text-align: justify;
+			}
+
 			.grid__img {
-				border-radius: 50%;
+				width: 80%;
+				margin-bottom: 20px;
+			}
+
+			.grid__link {
+				text-decoration: none;
+			}
+
+			@media screen and (max-width: 1080px) {
+			h1 {
+				font-size: 40px;
+			}
+			.grid {				
+				grid-template-columns: 1fr 1fr;
+				width: 90%;
+				margin: auto;
+				grid-gap: 30px;
+			}
+			}
+
+			@media screen and (max-width: 780px) {
+			h1 {
+				font-size: 36px;
+			}
+			.grid {				
+				grid-template-columns: 1fr;
+				width: 90%;
+				margin: auto;
+				grid-gap: 30px;
+			}
 			}
 		</style>
 	</head>
 	<body>
-    <div class="container">
-      <h1>30 latest posts</h1>
-		  <div class="grid"></div>
-    </div>
+		<header>
+			<h1>30 latest posts</h1>
+		</header>
 		
+		<div class="container">			
+			<div class="grid"></div>
+		</div>
+
 		<script>
 			let data;
 			const grid = document.querySelector('.grid');
@@ -45,10 +104,13 @@
 				.then((json) => (data = json));
 			setTimeout(function () {
 				data.forEach(function (el) {
+					let src = `img/avatar${el.userId}.png`;
+					
 					let html = `<div class="grid__item">
-				<img src = "https://w7.pngwing.com/pngs/862/646/png-transparent-beard-hipster-male-man-avatars-xmas-giveaway-icon-thumbnail.png" class="grid__img">
+				<img src = ${src} class="grid__img">
 				<h2 class="grid__title">${el.title}</h2>
-				<div class="grid__body">${el.body}</div>				
+				<div class="grid__body">${el.body} <a class="grid__link" href="#" title="Read more...">...📖</a></div>	
+							
 				</div>`;
 					if (el.id <= 30) {
 						grid.insertAdjacentHTML('beforeend', html);
