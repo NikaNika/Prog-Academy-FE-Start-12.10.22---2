@@ -1,17 +1,15 @@
 const apiKey = 'e0dce53e909d40b5b8ff77421dc31a93';
 const url = `https://newsapi.org/v2/everything?domains=wsj.com&apiKey=${apiKey}`;
-let data;
 const news = document.querySelector('.news');
 
 fetch(url)
 	.then((response) => response.json())
-  .then((json) => {
-    data = json.articles;    
-  })
-  .then(() => {onDataRender()});
+	.then((json) => {
+		onDataRender(json.articles);
+	});
 
-function onDataRender() {
-  data.forEach(function (el, index) {    
+function onDataRender(data) {
+	data.forEach(function (el, index) {
 		let html = `<div class="news__item">
 				<img class="news__item-img" src = ${el.urlToImage}>
         <div class="news__item-info">
@@ -25,5 +23,4 @@ function onDataRender() {
 			news.insertAdjacentHTML('beforeend', html);
 		}
 	});
-};
-  
+}
