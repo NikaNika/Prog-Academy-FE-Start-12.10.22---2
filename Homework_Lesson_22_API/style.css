@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #cccccc;
+  font-family: 'Old Standard TT', serif;
+}
+
+ul {
+  padding: 20px 30px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin: 30px;
+  }
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.news__item {
+  display: flex;
+  align-items: center;
+  background-color: wheat;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.news__item:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.news__item-img {
+  width: 50%;
+  height: auto;
+}
+
+.news__item-info {
+  padding: 0 30px;
+}
+
+.news__item-subtitle {
+  margin: 10px 0;
+}
+
+.news__item-subtitle span {
+  font-style: italic;
+}
+
+a.news__item-link {
+  display: block;
+  margin: 20px 0;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  .news__item {
+    flex-direction: column;
+  }
+
+  .news__item:nth-child(2n) {
+  flex-direction: column;
+}
+
+.news__item-img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.news__item-info {
+  padding: 0;
+}
+}
